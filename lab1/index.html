@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- tự động thích nghi với thiết bị -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab01 #3524</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <div class="header__title">
+                    <!-- liên kết với github -->
+                    <a href="https://github.com/pntamchau">Вариант 3524 | Фам Нгок Там Чау | P3225</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title change">Web-programming, Lab #01</h1>
+            <div class="main__row">
+                <!-- khối trái là khối đồ thị -->
+                <div class="main__left-block">
+                    <canvas id="graph"></canvas>
+                    <form class="form" method="get">
+                        <!-- tạo nút radio X-->
+                        <label class="form__label">X</label>
+                        <div class="form__row">
+                            <input type="radio" class="form__x-btn" name="x" value="-3">-3
+                            <input type="radio" class="form__x-btn" name="x" value="-2">-2
+                            <input type="radio" class="form__x-btn" name="x" value="-1">-1
+                            <input type="radio" class="form__x-btn" name="x" value="0">0
+                            <input type="radio" class="form__x-btn" name="x" value="1">1
+                            <input type="radio" class="form__x-btn" name="x" value="2">2
+                            <input type="radio" class="form__x-btn" name="x" value="3">3
+                            <input type="radio" class="form__x-btn" name="x" value="4">4
+                            <input type="radio" class="form__x-btn" name="x" value="5">5
+                        </div>
+
+                        <!-- tạo ô để điền y -->
+                        <label for="Y" class="form__label">Y</label>
+                        <div class="form__row">
+                            <input id="Y" required class="form__y-input" name="y" placeholder="Input (-3 ... 3)"
+                                   step="any" type="text" value="">
+                        </div>
+
+                        <!-- checkbox để chọn r -->
+                        <label class="form__label">R</label>
+                        <div class="form__row">
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="1">1
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="2">2
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="3">3
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="4">4
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="5">5
+                        </div>
+
+                        <!-- in lỗi -->
+                        <p id="error-message"></p>
+
+                        <div class="form__row">
+                            <button class="form__big-btn" disabled type="submit">Submit</button>
+                            <button class="form__big-btn" type="reset">Clear</button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- khối bảng hiển thị kết quả sau khi test -->
+                <div class="main__table-block">
+                    <table class="main__table">
+                        <thead>
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>R</th>
+                            <th>Time</th>
+                            <th>Work</th>
+                            <th>Result</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__text">
+                <a class="footer__title" href="https://se.ifmo.ru/courses/web" title="For more information">
+                    Web ITMO
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type='text/javascript' src="js/script.js"></script>
+<script type='text/javascript' src="js/graph.js"></script>
+
+</body>
+</html>
