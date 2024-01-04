@@ -30,11 +30,11 @@ $_SESSION['tdata'][] = [$x, $y, $r, $current_time, $exec_time, $result];
 
 function check_area($x, $y, $r) {
     return
-        ($x >= 0 and $y >= 0 and $r >= $x + $y) // triangle
+        ($x >=0 and $y >=0 and $x<=$r and $y<=$r)
         or
-        ($x <= 0 and $x >= -$r / 2 and $y >= 0 and $y <= $r) // square
-        or
-        ($x >= 0 and $y <= 0 and (pow($x,2) + pow($y,2) <= pow($r / 2, 2))); // circle
+        ($x >= 0 and $y <= 0 and 2*$y - $x + $r >0)
+        or 
+        ($x <= 0 and $y >= 0 and (pow($x,2) + pow($y,2) <= pow($r / 2, 2))); // circle;
 }
 
 function validate_values($x, $y, $r) {
