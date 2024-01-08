@@ -10,7 +10,7 @@ let selectedRCheckbox;
 const errorMessageBox = document.getElementById('error-message');
 
 // X buttons
-const xBtns = document.querySelectorAll('.form__x-btn');
+const xBtns = document.querySelectorAll('input[type="radio"][name="x"]');
 xBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const selectedValue = parseFloat(btn.value);
@@ -132,11 +132,10 @@ form.addEventListener('submit', e => {
 
     xhr.onloadend = () => {
         if (xhr.status === 200) {
-            window.location.href = "table.html";
+            window.location.href = "index.html";
             tbody.innerHTML = xhr.response;
 
             let isHit = document.querySelector('tbody tr:last-child td:last-child span').classList.contains('hit')
-            printDotOnGraph(xBtns.value, yInput.value, isHit)
         } else {
             console.log("status: ", xhr.status);
             if (xhr.status >= 400 && xhr.status < 600) {

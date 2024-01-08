@@ -54,4 +54,6 @@ foreach ($_SESSION["tdata"] as $rdata) {
         <td>$rdata[5]</td>
     </tr>
 HTML;
-} ?>
+} 
+
+?>

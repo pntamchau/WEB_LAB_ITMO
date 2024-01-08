@@ -12,7 +12,7 @@ function redrawGraph(r) {
     ctx.clearRect(0, 0, w, h);
 
     ctx.lineWidth = 2;
-    ctx.strokeStyle = 'black';
+    ctx.strokeStyle = 'white';
 
     // y axis
     ctx.beginPath();
@@ -69,7 +69,7 @@ function redrawGraph(r) {
     ctx.closePath();
 
     const fontSize = hatchGap / 3.5
-    ctx.fillStyle = 'black'
+    ctx.fillStyle = 'white'
 
     ctx.font = `500 ${fontSize * 1.4}px Roboto`;
     ctx.fillText('y', w / 2 - hatchWidth * 2.8, 15)
@@ -97,12 +97,4 @@ function redrawGraph(r) {
     ctx.fillText('-' + label2, w / 2 + hatchWidth * 2, h / 2 + hatchGap * 2 + 3);
 }
 
-// draw graph with standard label
 redrawGraph(rValue);
-
-function printDotOnGraph(xCenter, yCenter, isHit) {
-    redrawGraph(rValue);
-    ctx.fillStyle = isHit ? '#00ff00' : '#ff0000'
-    let x = w / 2 + xCenter * hatchGap * (2 / rValue) - 3, y = h / 2 - yCenter * hatchGap * (2 / rValue) - 3;
-    ctx.fillRect(x, y, 6, 6);
-}
